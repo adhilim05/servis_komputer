@@ -23,6 +23,6 @@ class pelanggan extends Model
     //untuk menyembunyikan sebuah kolom
     protected $hidden = '';
      
-
+    
     
 }
