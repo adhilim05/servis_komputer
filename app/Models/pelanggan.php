@@ -18,7 +18,7 @@ class pelanggan extends Model
     protected $primaryKey ='id_pelanggan';
 
     //melindungi agar kolom tidak bisa diisi
-    protected $guard = 'id_pelanggan';
+    protected $guarded = ['id_pelanggan'];
 
     //untuk menyembunyikan sebuah kolom
     protected $hidden = '';

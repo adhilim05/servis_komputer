@@ -14,16 +14,13 @@ return new class extends Migration
         Schema::create('detail_barang_servis', function (Blueprint $table) {
             $table->id("id_detail_servis");
             $table->unsignedBiginteger("id_servis");
-            $table->unsignedBiginteger("id_status");
-            $table->integer("tgl_ambil");
-            $table->integer("tgl_terima");
+            $table->date("tgl_ambil");
+            $table->date("tgl_terima");
             $table->string("model");
             $table->text("keluhan");
             $table->text("masalah");
             $table->integer("biaya");
-            $table->enum("status",['antrian','proses','selesai']);
-
-
+            $table->enum("status",['Pending','On Progress','Completed']);
             $table->foreign("id_servis")->references("id_servis")->on('barang_servis')->onDelete('cascade');
             $table->timestamps();
         });

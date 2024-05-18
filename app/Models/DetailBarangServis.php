@@ -5,18 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class barang_servis extends Model
+class DetailBarangServis extends Model
 {
     use HasFactory;
-    
      //menentukan nama tabel
-     protected $table = 'barang_servis'; 
+     protected $table = 'detail_barang_servis'; 
 
      //menentukan primary key
-     protected $primaryKey ='id_servis';
+     protected $primaryKey ='id_detail_servis';
  
      //melindungi agar kolom tidak bisa diisi
-     protected $guard = 'id_servis';
+     protected $guarded = ['id_detail_servis'];
  
      //untuk menyembunyikan sebuah kolom
      protected $hidden = '';

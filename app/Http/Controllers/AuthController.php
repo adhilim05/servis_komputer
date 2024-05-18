@@ -30,7 +30,7 @@ class AuthController extends Controller
             //     return redirect ('/dashboard admin');
             // }elseif (Auth::user()->role == "pelanggan")
             // {
-            return redirect ('/dashboard');
+            return redirect ()->route('admin.dashboard');
             
 
         }else {
